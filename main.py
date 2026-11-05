@@ -7,7 +7,8 @@ import io
 app = Flask(__name__)
 
 # Load the model
-model = torch.load('plant_disease_scripted.pt', map_location='cpu')
+# model = torch.load('plant_disease_scripted.pt', map_location='cpu')
+model = torch.load('plant_disease_scripted.pt', map_location='cpu', weights_only=False)
 model.eval()
 
 # Define image transformation
